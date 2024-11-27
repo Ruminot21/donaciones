@@ -9,7 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-image: url('https://i.postimg.cc/mkWdqP45/mar-26-11-2024-22-13-43.png'); /* Cambia esta URL */
-            background-size: cover; /* Cambiado de contain a cover para ajustar proporciones */
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
@@ -45,10 +45,6 @@
         .donate-button:hover {
             background-color: #218838;
         }
-        .visit-counter {
-            margin-top: 10px;
-            color: #333;
-        }
     </style>
 </head>
 <body>
@@ -56,24 +52,12 @@
         <h1>¡Haz tu Donación!</h1>
         <p>Ayuda a nuestra causa con tu donación. Cada aporte cuenta.</p>
         <button class="donate-button" id="donateBtn">Donar Ahora</button>
-        <div class="visit-counter" id="visitCounter">Visitas: 0</div>
     </div>
 
     <script>
         document.getElementById('donateBtn').addEventListener('click', function() {
             window.location.href ='https://biolibre.cl/donaciones24';
         });
-
-        function updateVisitCount() {
-            let count = localStorage.getItem('visitCount') || 0;
-            count++;
-            localStorage.setItem('visitCount', count);
-            document.getElementById('visitCounter').textContent = 'Visitas: ' + count;
-        }
-
-        updateVisitCount();
     </script>
 </body>
 </html>
-
-
